@@ -1,6 +1,5 @@
 package go.game;
 
-
 import go.game.Space.Resident;
 import javafx.geometry.Pos;
 import javafx.scene.layout.Background;
