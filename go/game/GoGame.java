@@ -36,7 +36,7 @@ import javafx.stage.Stage;
  * 
  * @author Benjamin C. McKinley
  */
-public class GoGame extends Application {
+public class GoApp extends Application {
 
 	Random rng = new Random();
 	public String version = "1.0.0";
@@ -68,7 +68,7 @@ public class GoGame extends Application {
 		stage.setOnCloseRequest(event -> {
 			game.stop();
 		});
-	} //GoGame
+	} //start
 	
 	/**
 	 * Records high score for the current game in a text file for
@@ -107,7 +107,7 @@ public class GoGame extends Application {
 			} catch (Exception e) {
 				System.out.println("Error recording score: " + e);
 				System.exit(1);
-			} // try
+			} //try
 			
 			startGame();
 			
@@ -119,7 +119,7 @@ public class GoGame extends Application {
 		sp.getChildren().addAll(scImv, vbox);	
 		Scene scoreScene = new Scene(sp);
 		stage.setScene(scoreScene);
-	}
+	} //recordHighscore
 	
 	/**
 	 * Builds new scene and starts a new game of Go.
@@ -184,6 +184,6 @@ public class GoGame extends Application {
 	 */
 	public static void main(String[] args) {
 		Application.launch();
-	}
+	} //main
 
-} //GoGame
+} //GoApp
